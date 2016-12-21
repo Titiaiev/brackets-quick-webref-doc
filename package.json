@@ -1,0 +1,13 @@
+{
+    "name": "brackets-quick-webref-doc",
+    "title": "Quick Webref Doc",
+    "description": "Это расширение для Brackets позволяет искать документацию по html и css, на сайте https://webref.ru. Оно является форком расширения Quick MDN Doc (автор: Renan Veroneze <veroneze.renan@gmail.com>)",
+    "homepage": "https://github.com/titiaiev/brackets-quick-webref-doc",
+    "version": "0.0.1",
+    "author": "Maksim Titiaiev <m.titiaiev@gmail.com>",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.24.0"
+    },
+    "keywords": ["webref", "search", "doc"]
+}
