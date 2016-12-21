@@ -15,15 +15,15 @@ define(function (require, exports, module) {
 
         var dialog = dialogs.showModalDialogUsingTemplate( template, false );
 
-        $('.mdn-input').keyup(function( e ) {
-            if( e.keyCode == '13' ) $('.mdn-submit').trigger('click');
+        $('.wr-input').keyup(function( e ) {
+            if( e.keyCode == '13' ) $('.wr-submit').trigger('click');
             if( e.keyCode == '27' ) dialog.close();
         }).focus();
 
-        $('.mdn-close').click(function() { dialog.close(); });
-        $('.mdn-submit').click(function() {
+        $('.wr-close').click(function() { dialog.close(); });
+        $('.wr-submit').click(function() {
 
-            var query = $('.mdn-input').val();
+            var query = $('.wr-input').val();
 
             native_app.openURLInDefaultBrowser( 'https://webref.ru/search/?s=' + query );
             dialog.close();
@@ -39,11 +39,11 @@ define(function (require, exports, module) {
 
         icon.click(function() {open_modal();});
 
-        var MDN_DOC_EXECUTE = 'com.mdn.doc';
-        command.register('Webref Doc', MDN_DOC_EXECUTE, open_modal);
+        var WEBREF_DOC_EXECUTE = 'com.wr.doc';
+        command.register('webref.ru Doc', WEBREF_DOC_EXECUTE, open_modal);
 
         var menu = menus.getMenu(menus.AppMenuBar.FIND_MENU);
-        menu.addMenuItem(MDN_DOC_EXECUTE, 'Ctrl-Alt-Z');
+        menu.addMenuItem(WEBREF_DOC_EXECUTE, 'Ctrl-Alt-Z');
 
     });
 
